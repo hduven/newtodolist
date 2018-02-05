@@ -1,0 +1,6 @@
+<h1>{{ todo.title }}</h1>
+<ul>
+{% for todo in todo.description_set.all %}
+    <li>{{ todo.description.description_text }}</li>
+{% endfor %}
+</ul>

@@ -1,0 +1,17 @@
+
+<meta charset="utf-8">
+<h1>TODOLİST
+<hr>
+{% if latest_category_list %}
+    <ul>
+    {% for category in latest_category_list %}
+       <li><a href="/todolist/{{ category.id }}/">{{ category.category_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>hic bisey girmedin.</p>
+{% endif %}
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'todolist/style.css' %}" />

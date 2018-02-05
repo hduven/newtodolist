@@ -1,0 +1,9 @@
+<h1>{{ category.category_name }}</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+{% csrf_token %}
+{% for todo in category.todo_set.all %}
+    <li><a href="/todolist/{{ todo.id }}/">{{ todo.title }}</a></li>
+{% endfor %}
+</form>

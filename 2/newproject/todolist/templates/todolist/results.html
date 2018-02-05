@@ -1,0 +1,9 @@
+<h1>{{ category.category_name }}</h1>
+
+<ul>
+{% for todo in category.todo_set.all %}
+    <li>{{ todo.title }} -- {{ description.description_text }} description_text{{ description.description_text|pluralize }}</li>
+{% endfor %}
+</ul>
+
+<a href="{% url 'todolist:detail' category.id %}">Yeniden yazmak istermisin?</a>
